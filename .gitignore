@@ -1,3 +1,34 @@
+# Build artifacts
+build/
+Debug/
+Release/
+*.o
+*.d
+*.elf
+*.map
+*.bin
+*.hex
+*.lst
+*.obj
+*.lnp
+
+# IDE/editor
+.vscode/
+.eide/
+.idea/
+.settings/
+*.code-workspace
+
+# Logs and temp
+*.log
+*.tmp
+~$*
+
+# Generated views
+build/**/compile_commands.json
+build/**/Pump_test.map.view
+build/**/Pump_test.objlist
+
 # dot files
 /.vscode/launch.json
 /.settings
