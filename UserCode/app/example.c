@@ -8,7 +8,7 @@ int main(void)
 
     PumpCtrl_Init();
 
-    Pump_SetPower(30);  // 设置30%功率
+    Pump_SetPower(30);  // 设置30%占空比
     Pump_On();
     HAL_Delay(3000);
 
