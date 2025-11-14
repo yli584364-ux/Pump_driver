@@ -24,6 +24,5 @@ extern TIM_HandleTypeDef BSP_PUMP_TIM; // 在bsp_pump.c定义
 void BSP_Pump_GPIO_Init(void);
 
 void BSP_Pump_Init(void);
-void BSP_Pump_SetDuty(uint8_t duty);
 
 #endif

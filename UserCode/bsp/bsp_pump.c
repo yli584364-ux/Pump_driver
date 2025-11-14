@@ -43,10 +43,11 @@ void BSP_Pump_Init(void)
     HAL_GPIO_Init(BSP_PUMP_GPIO_PORT, &GPIO_InitStruct);
 
     //定时器配置
+    //厂家建议PWM输出频率为20kHz
     BSP_PUMP_TIM.Instance = TIM4;
-    BSP_PUMP_TIM.Init.Prescaler = 84 - 1; //假设时钟为84MHz，预分频84，计数频率1MHz
+    BSP_PUMP_TIM.Init.Prescaler = 42 - 1; //假设时钟为84MHz，预分频42，计数频率2MHz
     BSP_PUMP_TIM.Init.CounterMode = TIM_COUNTERMODE_UP;
-    BSP_PUMP_TIM.Init.Period = 1000 - 1; //周期1000，频率1kHz
+    BSP_PUMP_TIM.Init.Period = 100 - 1; //周期100，频率20kHz
     BSP_PUMP_TIM.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
     HAL_TIM_PWM_Init(&BSP_PUMP_TIM);
 
